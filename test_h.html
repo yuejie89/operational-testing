@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="body">
+    </div>
+    <button>添加字段</button>
+    
+    <input type="text" id="http" placeholder="请输入你要请求的地址" style="width: 100%;height: 30px;">
+    <button>提交</button>
+    <div id="json"></div>
+</body>
+<script>
+    var myBody = document.querySelector('#body');
+    var html='';
+    function newInput() {
+      html = `
+        <div class="msg">
+            <span>key</span>
+            <input type="text" class="key">
+            <span>value</span>
+            <input type="text" class="value">
+        </div>
+      `;
+	    myBody.innerHTML= myBody.innerHTML+html;
+    }
+    var addBtn = document.querySelectorAll('button')[0];
+    addBtn.onclick = function () {
+      newInput();
+    };
+    var postBtn = document.querySelectorAll('button')[1];
+    postBtn.onclick = function () {
+      var datas = {};
+      myBody.querySelectorAll('.msg').forEach(item=> {
+      	var string = `{"${item.querySelector('.key').value}":"${item.querySelector('.value').value}"}`;
+      	string = JSON.parse(string);
+      	Object.assign(datas,string)
+      })
+      var http = document.querySelector('#http').value;
+      httpsPost(datas,function (is,res) {
+        document.querySelector('#json').innerHTML = res;
+      },http)
+      
+    };
+    function httpsPost(cmdObject, onResult, http)
+    {
+    	console.log(cmdObject)
+    	console.log(http)
+	    let xhr = null;
+	    if ( window.XMLHttpRequest )
+	    {
+		    xhr = new XMLHttpRequest();
+	    }else
+	    {
+		    xhr = new ActiveXObject('Microsoft.XMLHTTP');
+	    }
+	    xhr.open('post', http);
+	    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+	    xhr.send(JSON.stringify(cmdObject));
+	    xhr.onload = function() {
+		    if ( xhr.readyState == 4 && xhr.status == 200 )
+		    {
+			    var res = JSON.parse(xhr.responseText);
+			    onResult(true, JSON.stringify(res));
+		    }else
+		    {
+			    onResult(false);
+		    }
+	    }
+    }
+</script>
+</html>
