@@ -8,6 +8,153 @@
     <meta http-equiv="expires" content="0">
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="ajax方式">
+    <style type="text/css">
+        body{  
+            margin: 0;
+            padding: 0; 
+        }
+        div{
+            border-top: 1px solid #999;
+        }
+        span{
+            line-height: 40px;
+        }
+        a{
+            text-decoration:none;
+        }
+        #form-div{
+            border: 0px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        #form1{
+                margin: 0;
+        }
+        .div_name{
+            border:0;
+            width: 100%;
+        }
+        .div{
+            width: 100%;
+        }
+        .div1,.div2{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .div_name_span,.div_span{
+            width: 15%;
+            display:inline-block;
+            float: left;
+            text-align:justify;
+        }
+        .div_input,.div_name_input{
+            width: 85%;
+            height: 40px;
+        }
+       .url_span,.getpost_span{
+            width: 15%;
+            float: left;
+            text-align:justify;
+
+        }
+        .url_input,.getpost_input{
+            width: 85%;
+            float: left;
+            height: 40px;
+        }
+        .div3{
+            width: 100%;
+            height: 40px;
+            text-align: left;
+        }
+        .span1{
+            width: 10%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            padding-left:5px; 
+            /*border-left: 1px solid #999;*/
+        }
+        .span2{
+            width: 20%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            border-left: 1px solid #999;
+            padding-left:5px; 
+        }
+        .span3{
+            width: 5%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            border-left: 1px solid #999;
+            padding-left:5px; 
+        }
+        .span4{
+            width: 5%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            border-left: 1px solid #999;
+            padding-left:5px; 
+        }
+        .span5{
+            width: 40%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            border-left: 1px solid #999;
+            padding-left:5px; 
+        }
+        .span6{
+            width: 10%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            border-left: 1px solid #999;
+            padding-left:5px; 
+        }
+        input.input{
+            width: 100%;
+            height: 40px;
+            float: left;
+            text-align: left;
+        }
+        input{
+            border: 0px;outline:none;cursor: pointer;
+        }
+        .div5,.div6{
+            width: 100%;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+        }
+        .a2{
+            padding-left:10%; 
+        }
+        #div7{
+            width: 100%;
+            height: 40px;
+        }
+        .div8{
+            width: 100%;
+            height: 40px;
+            text-align: left;
+            border-top: 0px solid #999;
+            border-bottom:  1px solid #999;
+        }
+        .div9{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            border-top: 0px solid #999;
+            border-bottom:  1px solid #999;
+        }
+    </style>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
         function login() {
@@ -47,34 +194,108 @@
             });
         }
         function add_dom_t() {
-             document.getElementById('div2').style.display=""; 
+             document.getElementById('div7').style.display=""; 
+            document.getElementById("id_name1").value='';
+            document.getElementById("id_name2").value='';
+            document.getElementById("id_name3").value='';
+            document.getElementById("id_name4").value='';
+            document.getElementById("id_name5").value='';
         }
         function add_dom() {
-            document.getElementById('div2').style.display="none"; 
+            document.getElementById('div7').style.display="none"; 
             var d1 = document.getElementById('form1'); 
-            var name = document.getElementById("id_name").value;
-            var value = document.getElementById("id_value").value;
+            var id_name = document.getElementById("id_name1").value;
+            var id_value = document.getElementById("id_name2").value;
+            var id_type = document.getElementById("id_name3").value;
+            var id_isnull = document.getElementById("id_name4").value;
+            var id_blurb = document.getElementById("id_name5").value;
 
-            d1.insertAdjacentHTML('beforeend', '<p>'+name+' ：<input name="'+name+'" type="text" calss="TextBox4" tabindex="2" size="16" value="'+value+'"/></p>');
+            d1.insertAdjacentHTML('beforeend',' <div class="div3"> '+
+            '<span class="span1">'+
+                '<input id="'+id_name+'name" class="input" name="'+id_name+'name" type="text"  tabindex="1" size="36" value="'+id_name+'"/>'+
+            '</span>'+
+            '<span class="span2">'+
+                '<input id="'+id_name+'value" class="input" name="'+id_name+'value" type="text"  tabindex="1" size="36" value="'+id_value+'"/>'+
+            '</span>'+
+            '<span class="span3">'+
+                '<input id="'+id_name+'type" class="input" name="'+id_name+'type" type="text"  tabindex="1" size="36" value="'+id_type+'"/>'+
+            '</span>'+
+            '<span class="span4">'+
+                '<input id="'+id_name+'isnul" class="input" name="'+id_name+'isnul" type="text"  tabindex="1" size="36" value="'+id_isnull+'"/>'+
+            '</span>'+
+            '<span class="span5">'+
+                '<input id="'+id_name+'blurb" class="input" name="'+id_name+'blurb" type="text"  tabindex="1" size="36" value="'+id_blurb+'"/>'+
+            '</span>'+
+            '<span class="span6">'+
+                '<a href="#" class="a1">Update</a>'+
+                '<a href="#" class="a2">Delete</a>'+
+            '</span>'+
+        '</div>');
         }
     </script>
+    
 </head>
 <body>
 <div id="form-div">
     <form id="form1" onsubmit="return false" action="##" method="post">
-        <p>&nbsp;n a m e ：<input id="name" name="name" type="text"  tabindex="1" size="36" placeholder="接口名称"/></p>
-        <p> &nbsp;U &nbsp; R &nbsp; L ：<input id="url" name="url" type="text"  tabindex="1" size="36" placeholder="接口URL"/></p>
-        <p>GET/POST:<input id="getpost" name="getpost" type="text"  tabindex="1" size="36" value="POST"/></p>
+        <div class="div_name">
+            <span class="div_name_span">I N T E R F A C E：</span>
+            <input class="div_name_input" type="text" name="interface_name" tabindex="1" size="36" placeholder="Interface_name">
+        </div>
+        <div class="div">
+            <span class="div_span">INTRODUCTION：</span>
+            <input class="div_input" type="text" name="interface_name" tabindex="2" size="36" placeholder="Introduction">
+        </div>
+        <div class="div1">
+                <span class="url_span">U  R   L ：</span>
+                <input id="url" class="url_input" name="url" type="text"  tabindex="1" size="36" placeholder="接口URL"/>
+        </div>
+        <div class="div2">
+            <span class="getpost_span">GET / POST :</span>
+            <input id="getpost" class="getpost_input" name="getpost" type="text"  tabindex="1" size="36" value="POST"/>
+        </div>
+        <div class="div3">
+            <span class="span1">Name</span> 
+            <span class="span2">Value</span>
+            <span class="span3">Type</span>
+            <span class="span4">Isnull</span>
+            <span class="span5">Dlurb</span>
+            <span class="span6">Operation</span>
+        </div>
     </form>
-    <p><input type="button" value="add input" onclick="add_dom_t()"></p>
-    <p><input type="button" value="register" onclick="login()">&nbsp;<input type="reset" value="reset">&nbsp;<input type="button" name="save" value="save" onclick="save()"></p>
+    <div id="div7" style="display: none;">
+        <form id="form2" onsubmit="return false" action="#" method="post">
+            <div class="div8">
+                <span class="span1">
+                    <input id="id_name1" class="input"  type="text"  tabindex="1" size="36" placeholder="name"/>
+                </span>
+                <span class="span2">
+                    <input id="id_name2" class="input"  type="text"  tabindex="1" size="36" placeholder="value"/>
+                </span>
+                <span class="span3">
+                    <input id="id_name3" class="input"  type="text"  tabindex="1" size="36" placeholder="type"/>
+                </span>
+                <span class="span4">
+                    <input id="id_name4" class="input"  type="text"  tabindex="1" size="36" placeholder="isnull"/>
+                </span>
+                <span class="span5">
+                    <input id="id_name5" class="input"  type="text"  tabindex="1" size="36" placeholder="blurb"/>
+                </span>
+                <span class="span6">
+                    <input type="button" value="add dom" onclick="add_dom()">&nbsp;
+                </span>
+            </div>
+        </form>
+    </div>
+    <div class="div5">
+        <input type="button" value="add input" onclick="add_dom_t()">&nbsp;
+    </div>
+    <div class="div6">
+        <input type="button" value="register" onclick="login()">&nbsp;
+        <input type="reset" value="reset">&nbsp;
+        <input type="button" name="save" value="save" onclick="save()">
+    </div>
 </div>
-<div id="div2" style="display: none;">
-    <form id="form2" onsubmit="return false" action="##" method="post">
-        <p>name : <input id="id_name" type="text" name="name"></p>
-        <p>value : <input  id="id_value" type="text" name="value"></p>
-        <input type="button" value="add dom" onclick="add_dom()">
-    </form>
-</div>
+
 </body>
 </html>
