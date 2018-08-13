@@ -165,7 +165,7 @@
                 type: getpost,//方法类型
                 dataType: "json",//预期服务器返回的数据类型
                 url: url ,//url
-                data: $('#form1').serialize(),
+                data: $('#form3').serialize(),
                 success: function (result) {
                     console.log(result);//打印服务端返回的数据(调试用)
                     
@@ -231,6 +231,9 @@
                 '<a href="#" class="a2">Delete</a>'+
             '</span>'+
         '</div>');
+
+            var d3 = document.getElementById('form3'); 
+            d3.insertAdjacentHTML('beforeend','<input name="'+id_name+'" type="text"  value="'+id_value+'"/>');
         }
     </script>
     
@@ -297,5 +300,9 @@
     </div>
 </div>
 
+<div id="div10" style="display: none;">
+        <form id="form3" onsubmit="return false" action="#" method="post">
+        </form>
+    </div>
 </body>
 </html>
