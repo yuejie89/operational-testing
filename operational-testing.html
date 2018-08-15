@@ -9,231 +9,236 @@
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="ajax方式">
     <style type="text/css">
-        body{  
-            margin: 0;
-            padding: 0; 
-        }
-        div{
-            border-top: 1px solid #999;
-        }
-        span{
-            line-height: 40px;
-        }
-        a{
-            text-decoration:none;
-        }
-        #form-div{
-            border: 0px;
-            width: 90%;
-            margin: 0 auto;
-        }
-        #form1{
+            body{  
                 margin: 0;
-        }
-        .div_name{
-            border:0;
-            width: 100%;
-        }
-        .div{
-            width: 100%;
-        }
-        .div1,.div2{
-            width: 100%;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-        }
-        .div_name_span,.div_span{
-            width: 15%;
-            display:inline-block;
-            float: left;
-            text-align:justify;
-        }
-        .div_input,.div_name_input{
-            width: 85%;
-            height: 40px;
-        }
-       .url_span,.getpost_span{
-            width: 15%;
-            float: left;
-            text-align:justify;
+                padding: 0; 
+            }
+            div{
+                border-top: 1px solid #999;
+            }
+            span{
+                line-height: 40px;
+            }
+            a{
+                text-decoration:none;
+            }
+            #form-div{
+                border: 0px;
+                width: 90%;
+                margin: 0 auto;
+            }
+            #form1{
+                    margin: 0;
+            }
+            .div_name{
+                border:0;
+                width: 100%;
+            }
+            .div{
+                width: 100%;
+            }
+            .div1,.div2{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .div_name_span,.div_span{
+                width: 15%;
+                display:inline-block;
+                float: left;
+                text-align:justify;
+            }
+            .div_input,.div_name_input{
+                width: 85%;
+                height: 40px;
+            }
+           .url_span,.getpost_span{
+                width: 15%;
+                float: left;
+                text-align:justify;
 
-        }
-        .url_input,.getpost_input{
-            width: 85%;
-            float: left;
-            height: 40px;
-        }
-        .div3{
-            width: 100%;
-            height: 40px;
-            text-align: left;
-        }
-        .span1{
-            width: 10%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            padding-left:5px; 
-            /*border-left: 1px solid #999;*/
-        }
-        .span2{
-            width: 20%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            border-left: 1px solid #999;
-            padding-left:5px; 
-        }
-        .span3{
-            width: 5%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            border-left: 1px solid #999;
-            padding-left:5px; 
-        }
-        .span4{
-            width: 5%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            border-left: 1px solid #999;
-            padding-left:5px; 
-        }
-        .span5{
-            width: 40%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            border-left: 1px solid #999;
-            padding-left:5px; 
-        }
-        .span6{
-            width: 10%;
-            height: 40px;
-            float: left;
-            text-align: left;
-            border-left: 1px solid #999;
-            padding-left:5px; 
-        }
-        input.input{
-            width: 100%;
-            height: 40px;
-            float: left;
-            text-align: left;
-        }
-        input{
-            border: 0px;outline:none;cursor: pointer;
-        }
-        .div5,.div6{
-            width: 100%;
-            height: 40px;
-            text-align: left;
-            line-height: 40px;
-        }
-        .a2{
-            padding-left:10%; 
-        }
-        #div7{
-            width: 100%;
-            height: 40px;
-        }
-        .div8{
-            width: 100%;
-            height: 40px;
-            text-align: left;
-            border-top: 0px solid #999;
-            border-bottom:  1px solid #999;
-        }
-        .div9{
-            width: 100%;
-            height: 40px;
-            line-height: 40px;
-            text-align: left;
-            border-top: 0px solid #999;
-            border-bottom:  1px solid #999;
-        }
+            }
+            .url_input,.getpost_input{
+                width: 85%;
+                float: left;
+                height: 40px;
+            }
+            .div3{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+            }
+            .span1{
+                width: 10%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                padding-left:5px; 
+                /*border-left: 1px solid #999;*/
+            }
+            .span2{
+                width: 20%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span3{
+                width: 5%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span4{
+                width: 5%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span5{
+                width: 40%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span6{
+                width: 10%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            input.input{
+                width: 100%;
+                height: 40px;
+                float: left;
+                text-align: left;
+            }
+            input{
+                border: 0px;outline:none;cursor: pointer;
+            }
+            .div5,.div6{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                line-height: 40px;
+            }
+            .a2{
+                padding-left:10%; 
+            }
+            #div7{
+                width: 100%;
+                height: 40px;
+            }
+            .div8{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                border-top: 0px solid #999;
+                border-bottom:  1px solid #999;
+            }
+            .div9{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: left;
+                border-top: 0px solid #999;
+                border-bottom:  1px solid #999;
+            }
     </style>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
-        function login() {
-            var url = document.getElementById("url").value;
-            var getpost = document.getElementById("getpost").value;
-            $.ajax({
-                //几个参数需要注意一下
-                type: getpost,//方法类型
-                dataType: "json",//预期服务器返回的数据类型
-                url: url ,//url
-                data: $('#form3').serialize(),
-                success: function (result) {
-                    console.log(result);//打印服务端返回的数据(调试用)
-                    
-                },
-                error : function() {
-                    alert("异常！");
-                }
-            });
-        }
-        function save() {
-            var url = "https://easy.jiateng.wang/operational/save";//document.getElementById("url").value;
-            var getpost = document.getElementById("getpost").value;
-            $.ajax({
-                //几个参数需要注意一下
-                type: getpost,//方法类型
-                dataType: "json",//预期服务器返回的数据类型
-                url: url ,//url
-                data: $('#form1').serialize(),
-                success: function (result) {
-                    console.log(result);//打印服务端返回的数据(调试用)
-                    
-                },
-                error : function() {
-                    alert("异常！");
-                }
-            });
-        }
-        function add_dom_t() {
-             document.getElementById('div7').style.display=""; 
-            document.getElementById("id_name1").value='';
-            document.getElementById("id_name2").value='';
-            document.getElementById("id_name3").value='';
-            document.getElementById("id_name4").value='';
-            document.getElementById("id_name5").value='';
-        }
-        function add_dom() {
-            document.getElementById('div7').style.display="none"; 
-            var d1 = document.getElementById('form1'); 
-            var id_name = document.getElementById("id_name1").value;
-            var id_value = document.getElementById("id_name2").value;
-            var id_type = document.getElementById("id_name3").value;
-            var id_isnull = document.getElementById("id_name4").value;
-            var id_blurb = document.getElementById("id_name5").value;
+            counter = 0;
+            person = new Array();
+            function login() {
+                var url = document.getElementById("url").value;
+                var getpost = document.getElementById("getpost").value;
+                $.ajax({
+                    //几个参数需要注意一下
+                    type: getpost,//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: url ,//url
+                    data: $('#form3').serialize(),
+                    success: function (result) {
+                        console.log(result);//打印服务端返回的数据(调试用)
+                        
+                    },
+                    error : function() {
+                        alert("异常！");
+                    }
+                });
+            }
+            function save() {
+                var url = "https://easy.jiateng.wang/operational/save";//document.getElementById("url").value;
+                var getpost = document.getElementById("getpost").value;
+                $.ajax({
+                    //几个参数需要注意一下
+                    type: getpost,//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: url ,//url
+                    data: $('#form1').serialize(),
+                    success: function (result) {
+                        console.log(result);//打印服务端返回的数据(调试用)
+                        
+                    },
+                    error : function() {
+                        alert("异常！");
+                    }
+                });
+            }
+            function add_dom_t() {
+                 document.getElementById('div7').style.display=""; 
+                document.getElementById("id_name1").value='';
+                document.getElementById("id_name2").value='';
+                document.getElementById("id_name3").value='';
+                document.getElementById("id_name4").value='';
+                document.getElementById("id_name5").value='';
+            }
+            function add_dom() {
 
-            d1.insertAdjacentHTML('beforeend',' <div class="div3"> '+
-            '<span class="span1">'+
-                '<input id="'+id_name+'name" class="input" name="'+id_name+'name" type="text"  tabindex="1" size="36" value="'+id_name+'"/>'+
-            '</span>'+
-            '<span class="span2">'+
-                '<input id="'+id_name+'value" class="input" name="'+id_name+'value" type="text"  tabindex="1" size="36" value="'+id_value+'"/>'+
-            '</span>'+
-            '<span class="span3">'+
-                '<input id="'+id_name+'type" class="input" name="'+id_name+'type" type="text"  tabindex="1" size="36" value="'+id_type+'"/>'+
-            '</span>'+
-            '<span class="span4">'+
-                '<input id="'+id_name+'isnul" class="input" name="'+id_name+'isnul" type="text"  tabindex="1" size="36" value="'+id_isnull+'"/>'+
-            '</span>'+
-            '<span class="span5">'+
-                '<input id="'+id_name+'blurb" class="input" name="'+id_name+'blurb" type="text"  tabindex="1" size="36" value="'+id_blurb+'"/>'+
-            '</span>'+
-            '<span class="span6">'+
-                '<a href="#" class="a1">Update</a>'+
-                '<a href="#" class="a2">Delete</a>'+
-            '</span>'+
-        '</div>');
+                document.getElementById('div7').style.display="none"; 
+                var d1 = document.getElementById('form1'); 
+                var id_name = document.getElementById("id_name1").value;
+                var id_value = document.getElementById("id_name2").value;
+                var id_type = document.getElementById("id_name3").value;
+                var id_isnull = document.getElementById("id_name4").value;
+                var id_blurb = document.getElementById("id_name5").value;
 
+                d1.insertAdjacentHTML('beforeend',' <div class="div3"> '+
+                '<span class="span1">'+
+                    '<input id="'+id_name+'name" class="input" name="'+id_name+'name" type="text"  tabindex="1" size="36" value="'+id_name+'" readonly="readonly"/>'+
+                '</span>'+
+                '<span class="span2">'+
+                    '<input id="'+id_name+'value" class="input" name="'+id_name+'value" type="text"  tabindex="1" size="36" value="'+id_value+'"/>'+
+                '</span>'+
+                '<span class="span3">'+
+                    '<input id="'+id_name+'type" class="input" name="'+id_name+'type" type="text"  tabindex="1" size="36" value="'+id_type+'"/>'+
+                '</span>'+
+                '<span class="span4">'+
+                    '<input id="'+id_name+'isnul" class="input" name="'+id_name+'isnul" type="text"  tabindex="1" size="36" value="'+id_isnull+'"/>'+
+                '</span>'+
+                '<span class="span5">'+
+                    '<input id="'+id_name+'blurb" class="input" name="'+id_name+'blurb" type="text"  tabindex="1" size="36" value="'+id_blurb+'"/>'+
+                '</span>'+
+                '<span class="span6">'+
+                    '<a href="#" class="a1">Update</a>'+
+                    '<a href="#" class="a2">Delete</a>'+
+                '</span>'+
+            '</div>');
+                
+            person[id_name] = id_type+','+id_isnull;
             var d3 = document.getElementById('form3'); 
             d3.insertAdjacentHTML('beforeend','<input name="'+id_name+'" type="text"  value="'+id_value+'"/>');
+            console.log(person);
         }
     </script>
     
