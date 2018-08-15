@@ -218,10 +218,10 @@
                     '<input id="'+id_name+'name" class="input" name="'+id_name+'name" type="text"  tabindex="1" size="36" value="'+id_name+'" readonly="readonly"/>'+
                 '</span>'+
                 '<span class="span2">'+
-                    '<input id="'+id_name+'value" class="input" name="'+id_name+'value" type="text"  tabindex="1" size="36" value="'+id_value+'"/>'+
+                    '<input id="'+id_name+'value" class="input"  onblur="upvalue(event)" name="'+id_name+'value" type="text"  tabindex="1" size="36" value="'+id_value+'"/>'+
                 '</span>'+
                 '<span class="span3">'+
-                    '<input id="'+id_name+'type" class="input" name="'+id_name+'type" type="text"  tabindex="1" size="36" value="'+id_type+'"/>'+
+                    '<input id="'+id_name+'type" class="input"  name="'+id_name+'type" type="text"  tabindex="1" size="36" value="'+id_type+'"/>'+
                 '</span>'+
                 '<span class="span4">'+
                     '<input id="'+id_name+'isnul" class="input" name="'+id_name+'isnul" type="text"  tabindex="1" size="36" value="'+id_isnull+'"/>'+
@@ -235,10 +235,16 @@
                 '</span>'+
             '</div>');
                 
-            person[id_name] = id_type+','+id_isnull;
             var d3 = document.getElementById('form3'); 
-            d3.insertAdjacentHTML('beforeend','<input name="'+id_name+'" type="text"  value="'+id_value+'"/>');
-            console.log(person);
+            d3.insertAdjacentHTML('beforeend','<input id="'+id_name+'value3" name="'+id_name+'" type="text"  value="'+id_value+'"/>');
+
+        }
+         valueid ='';
+        function upvalue(e) {
+            valueid =e.target.id;
+            document.getElementById(valueid+'3').value = document.getElementById(valueid).value;
+            console.log(valueid);
+            console.log(document.getElementById(valueid+'3').value);
         }
     </script>
     
