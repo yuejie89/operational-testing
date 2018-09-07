@@ -165,11 +165,19 @@
                 $.ajax({
                     //几个参数需要注意一下
                     type: getpost,//方法类型
-                    dataType: "json",//预期服务器返回的数据类型
+                    
                     url: url ,//url
                     data: $('#form3').serialize(),
-                    success: function (result) {
-                        console.log(result);//打印服务端返回的数据(调试用)
+
+                    async:false,
+                    dataType: "jsonp",//预期服务器返回的数据类型
+                    jsonp: "callback",
+                    //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                    jsonpCallback:"success_jsonpCallback",
+               
+
+                    success: function (json) {
+                        console.log(json);//打印服务端返回的数据(调试用)
                         
                     },
                     error : function() {
@@ -183,11 +191,15 @@
                 $.ajax({
                     //几个参数需要注意一下
                     type: getpost,//方法类型
-                    dataType: "json",//预期服务器返回的数据类型
                     url: url ,//url
                     data: $('#form1').serialize(),
-                    success: function (result) {
-                        console.log(result);//打印服务端返回的数据(调试用)
+                    async:false,
+                    dataType: "jsonp",//预期服务器返回的数据类型
+                    jsonp: "callback",
+                    //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                    jsonpCallback:"success_jsonpCallback",
+                    success: function (json) {
+                        console.log(json);//打印服务端返回的数据(调试用)
                         
                     },
                     error : function() {
@@ -262,7 +274,7 @@
         </div>
         <div class="div1">
                 <span class="url_span">U  R   L ：</span>
-                <input id="url" class="url_input" name="url" type="text"  tabindex="1" size="36" placeholder="接口URL"/>
+                <input id="url" class="url_input" name="url" type="text"  tabindex="1" size="36" value="http://yue.growthupup.com/miniapp/api/miniapp/"/>
         </div>
         <div class="div2">
             <span class="getpost_span">GET / POST :</span>
