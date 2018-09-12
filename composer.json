@@ -1,0 +1,37 @@
+{
+    "name": "yuejie89/operational-testing",
+    "description": "the new Operational-testing application",
+    "type": "project",
+    "authors": [
+        {
+            "name": "刘家腾",
+            "email": "yuejie89@sina.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "easyswoole/easyswoole": "2.x-dev",
+        "easyswoole/swoole-ide-helper": "^1.0",
+        "joshcam/mysqli-database-class": "dev-master"
+    },
+    "require-dev": {
+        "composer/composer": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+	    "MysqliDb\\":"App/Vendor/Db/MysqliDb.php"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "App\\Run::postCreateCmd"
+        ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
