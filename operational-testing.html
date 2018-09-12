@@ -179,14 +179,14 @@
                 });
             }
             function save() {
-                var url = "https://easy.jiateng.wang/operational/save";//document.getElementById("url").value;
+                var url = document.getElementById("url").value;
                 var getpost = document.getElementById("getpost").value;
                 var introduction = document.getElementById("introduction").value;
                 var interface_name = document.getElementById("interface_name").value;
                 $.ajax({
                     //几个参数需要注意一下
                     type: getpost,//方法类型
-                    url: url ,//url
+                    url: "https://easy.jiateng.wang/operational/save" ,//url
                     //data: $('#form1').serialize(),
                     data: {
                             data:data_dom,

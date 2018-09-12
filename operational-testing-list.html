@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>operatlonal-testing-list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <meta http-equiv="description" content="ajax方式">
+    <style type="text/css">
+            body{  
+                margin: 0;
+                padding: 0; 
+            }
+            div{
+                border-top: 1px solid #999;
+            }
+            span{
+                line-height: 40px;
+            }
+            a{
+                text-decoration:none;
+            }
+            .form-div-body{
+            	border: 0px;
+                width: 90%;
+                margin: 0 auto;
+                
+            }
+            .form-div-list{
+				border: 0px;
+                width: 90%;
+                margin: 0 auto;
+            }
+			.form-div{
+                border: 0px;
+                width: 90%;
+                margin: 0 auto;
+            }
+            .div_interface_name{
+				border-top:none;
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				background-color: #fbfbfb;
+				padding-left: 15px;
+            }
+            #form1{
+                    margin: 0;
+            }
+            .div_name{
+                border:0;
+                width: 100%;
+            }
+            .div{
+                width: 100%;
+            }
+            .div1,.div2{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .div_name_span,.div_span{
+                width: 15%;
+                display:inline-block;
+                float: left;
+                text-align:justify;
+            }
+            .div_input,.div_name_input{
+                width: 85%;
+                height: 40px;
+            }
+           .url_span,.getpost_span{
+                width: 15%;
+                float: left;
+                text-align:justify;
+
+            }
+            .url_input,.getpost_input{
+                width: 85%;
+                float: left;
+                height: 40px;
+            }
+            .div3{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+            }
+            .span1{
+                width: 10%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                padding-left:5px; 
+                /*border-left: 1px solid #999;*/
+            }
+            .span2{
+                width: 20%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span3{
+                width: 5%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span4{
+                width: 5%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span5{
+                width: 40%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            .span6{
+                width: 10%;
+                height: 40px;
+                float: left;
+                text-align: left;
+                border-left: 1px solid #999;
+                padding-left:5px; 
+            }
+            input.input{
+                width: 100%;
+                height: 40px;
+                float: left;
+                text-align: left;
+            }
+            input{
+                border: 0px;outline:none;cursor: pointer;
+            }
+            .div5,.div6{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                line-height: 40px;
+            }
+            .a2{
+                padding-left:10%; 
+            }
+            #div7{
+                width: 100%;
+                height: 40px;
+            }
+            .div8{
+                width: 100%;
+                height: 40px;
+                text-align: left;
+                border-top: 0px solid #999;
+                border-bottom:  1px solid #999;
+            }
+            .div9{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: left;
+                border-top: 0px solid #999;
+                border-bottom:  1px solid #999;
+            }
+    </style>
+    <script src="./jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){ 
+             ready_dom();
+        });
+        function ready_dom() {
+                $.ajax({
+                    type: getpost,
+                    url: "https://easy.jiateng.wang/operational/get_list" ,
+                    data: {token:token },
+                    dataType: "json",
+                    success: function (json) {
+                        romance(json);
+                        console.log(json);
+                    },
+                    error : function(e) {
+                        alert(e);
+                    }
+                });
+        }
+        function romance(data) {
+            console.log(data);
+        }
+    </script>
+</head>
+<body>
+	<div class="form-div-body">
+
+        
+		<div class="form-div-list">
+			<div class="div_interface_name">1、interface_name </div>
+			<div class="form-div">
+				<form id="form1" onsubmit="return false" action="##" method="post">
+			        <div class="div_name">
+			            <span class="div_name_span">I N T E R F A C E：</span>
+			            <input id="interface_name" class="div_name_input" type="text" name="interface_name" tabindex="1" size="36" placeholder="Interface_name">
+			        </div>
+			        <div class="div">
+			            <span class="div_span">INTRODUCTION：</span>
+			            <input id="introduction" class="div_input" type="text" name="introduction" tabindex="2" size="36" placeholder="Introduction">
+			        </div>
+			        <div class="div1">
+			                <span class="url_span">U  R   L ：</span>
+			                <input id="url" class="url_input" name="url" type="text"  tabindex="1" size="36" value="http://localhost"/>
+			        </div>
+			        <div class="div2">
+			            <span class="getpost_span">GET / POST :</span>
+			            <input id="getpost" class="getpost_input" name="getpost" type="text"  tabindex="1" size="36" value="POST"/>
+			        </div>
+			        <div class="div3">
+			            <span class="span1">Name</span> 
+			            <span class="span2">Value</span>
+			            <span class="span3">Type</span>
+			            <span class="span4">Isnull</span>
+			            <span class="span5">Dlurb</span>
+			            <span class="span6">Operation</span>
+			        </div>
+			    </form>
+			</div>
+		</div>
+
+
+
+	</div>
+</body>
+</html>
+
+
+
